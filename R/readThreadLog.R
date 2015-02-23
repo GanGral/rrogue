@@ -1,7 +1,20 @@
 readThreadLog<-function(filename){
-  library(stringr)
-  library(plyr)
-  library(dplyr)
+
+if (!require("stringr")) {
+  install.packages("stringr")
+}
+
+if (!require("plyr")) {
+  install.packages("plyr")
+}
+
+if (!require("dplyr")) {
+  install.packages("dplyr")
+}
+
+  require(stringr)
+  require(plyr)
+  require(dplyr)
   ##na_strings<-c("Subsystem: piarchss","ThreadID","PoolName","Handle","HandleHighBits","Priority","State","Calls","LastTime","CurTime","PointID",
   ##              "ConnectId","RPCName")
   columns<-c("ThreadID","PoolName","Handle","HandleHighBits","Priority","State","Calls","LastTime","CurTime","PointID","ConnectId","RPCName")
