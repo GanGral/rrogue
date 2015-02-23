@@ -1,9 +1,9 @@
 Package: rrogue
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Finds out who makes PI Subsystem suffer
+Version: 0.5
 Date: 2015-02-23
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Igor Korablev aka GanGral
+Maintainer: gangral137@gmail.com, ikorablev@osisoft.com
+Description: Reads the ASCII outputs of <pisubsystem> -thread commands, analyzes it and returns with nice dataset.
+License: What license?
