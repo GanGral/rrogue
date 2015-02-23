@@ -1,6 +1,6 @@
-# Rogue Consumer Logs Analyzer
+## Rogue Consumer Logs Analyzer
 
-##Easy tool to briefly analyze outputs of "<pisubsystem> -thread" command and define the rogue PI Point or ProcessID 
+###Easy tool to briefly analyze outputs of "<pisubsystem> -thread" command and define the rogue PI Point or ProcessID 
 
 This is pre-build of "rrogue" package which does the following:
 
@@ -11,7 +11,7 @@ This is pre-build of "rrogue" package which does the following:
 3.Returns the tidy dataset with relevant information..
 
 
-##Steps to check how it performs:
+###Steps to check how it performs:
 
 1.Download the "rawDataExample.txt" dataset(actual ouput) and put into a folder on your local drive. 
 
@@ -19,7 +19,7 @@ This is pre-build of "rrogue" package which does the following:
 
 3.Run getRogueConsumer function,that takes two parameters: Path to dataset and CurTime threshold.
 
-###Requirements
+####Requirements
 Packages:
 "stringr"
 "plyr"
