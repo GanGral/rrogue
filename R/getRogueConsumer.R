@@ -9,11 +9,13 @@ getRogueConsumer<-function(filename,curTimeLimit){
   
   ## return a data.frame
   rogue_list<-data[more_then,]
+  rogue_list$CurTime<-as.numeric(rogue_list$CurTime)
+  rogue_list<-tbl_df(rogue_list)
+  rogue_list%>%
+    select(PointID,CurTime,ConnectId,State,PoolName)%>%
+    arrange(desc(CurTime),ConnectId)%>%
+    print
   
-  ##arrange with plyr
-  rogue_list<<-arrange(rogue_list,desc(CurTime))
-  plot(rogue_list$PointID,rogue_list$CurTime)
-  ##Arranging with R Base
-  ##rogue_list[order(rogue_list$CurTime,rogue_list$PointID,decreasing = TRUE),]
-  ##rogue_list[with(rogue_list,order("CurTime"))]
+  ##Plotting currently brings error when curTimeLimit is greater then max, need to fix
+  ##plot(rogue_list$PointID,rogue_list$CurTime)
 }
